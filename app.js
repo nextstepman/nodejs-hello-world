@@ -1,6 +1,6 @@
 const express = require('express');
 const session = require('express-session');
-const { ExpressOIDC } = require('@okta/oidc-middleware');
+const ExpressOIDC = require('@okta/oidc-middleware');
 
 const app = express();
 
