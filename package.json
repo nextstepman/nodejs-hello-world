@@ -7,5 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "@okta/oidc-middleware": "0.0.15",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6"
+  }
 }

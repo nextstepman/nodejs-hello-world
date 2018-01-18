@@ -1,8 +1,8 @@
-'use strict';
+// 'use strict';
 
 const express = require('express');
 const session = require('express-session');
-const ExpressOIDC = require('@okta/oidc-middleware');
+const { ExpressOIDC } = require('@okta/oidc-middleware');
 
 const app = express();
 
@@ -17,8 +17,8 @@ const CLIENTID = process.env.CLIENTID;
 const CLIENTSECRET = process.env.CLIENTSECRET;
 const CALLBACK = process.env.CALLBACK;
 
-console.log("client id is ${CLIENTID}");
-console.log("callback is ${CALLBACK}");
+console.log(`client id is ${CLIENTID}`);
+console.log(`callback is ${CALLBACK}`);
 
 const oidc = new ExpressOIDC({
   issuer: 'https://dev-502397.oktapreview.com/oauth2/default',
