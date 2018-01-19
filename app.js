@@ -17,6 +17,8 @@ const CLIENTID = process.env.CLIENTID;
 const CLIENTSECRET = process.env.CLIENTSECRET;
 const CALLBACK = process.env.CALLBACK;
 
+const PORT = process.env.PORT;
+
 console.log(`client id is ${CLIENTID}`);
 console.log(`callback is ${CALLBACK}`);
 
@@ -39,6 +41,6 @@ app.get('/protected', oidc.ensureAuthenticated(), function(req, res) {
   res.send(JSON.stringify(req.userinfo));
 });
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
+app.listen(PORT, function () {
+  console.log('Example app listening on port ' + PORT);
 });
